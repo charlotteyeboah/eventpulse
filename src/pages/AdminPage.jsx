@@ -54,7 +54,7 @@ const AdminPage = () => {
   const handleDeleteUser = async (id) => {
     try {
       const token = localStorage.getItem('ep_token');
-      await fetch(`http://localhost:5000/api/admin/users/${id}`, {
+      await fetch(`https://eventpulse-backend-7ptd.onrender.com/api/admin/users/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -69,7 +69,7 @@ const AdminPage = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('ep_token');
-      const res = await fetch('http://localhost:5000/api/categories', {
+      const res = await fetch('https://eventpulse-backend-7ptd.onrender.com/api/categories', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(newCategory)
@@ -88,7 +88,7 @@ const AdminPage = () => {
   const handleDeleteCategory = async (id) => {
     try {
       const token = localStorage.getItem('ep_token');
-      await fetch(`http://localhost:5000/api/categories/${id}`, {
+      await fetch(`https://eventpulse-backend-7ptd.onrender.com/api/categories/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

@@ -27,14 +27,14 @@ export const UserDashboard = () => {
   }, [user, navigate]);
 
   if (!user) return null;
-
+S
   const totalSpent = bookings.reduce((a, b) => a + (b.totalPrice || 0), 0);
 
   const stats = [
     { label: 'Tickets Booked', value: bookings.length, icon: '🎫', color: '#f0a500' },
-{ label: 'Upcoming Events', value: bookings.filter(b => b.status === 'confirmed').length, icon: '', color: '#3b82f6' },
-    { label: 'Total Spent', value: `AED ${totalSpent}`, icon: '', color: '#22c55e' },
-    { label: 'Reviews Given', value: 0, icon: '', color: '#e8445a' },
+{ label: 'Upcoming Events', value: bookings.filter(b => b.status === 'confirmed').length, icon: '📅', color: '#3b82f6' },
+    { label: 'Total Spent', value: `AED ${totalSpent}`, icon: '💰', color: '#22c55e' },
+    { label: 'Reviews Given', value: 0, icon: '⭐', color: '#e8445a' },
   ];
 
   const SIDEBAR_LINKS = [
@@ -65,10 +65,10 @@ export const UserDashboard = () => {
                   {link.icon} {link.label}
                 </button>
               ))}
-              <Link to="/events" className="dash-nav-item">Browse Events</Link>
-              {user.role === 'organizer' && <Link to="/organizer" className="dash-nav-item">Organizer Panel</Link>}
-              {user.role === 'admin' && <Link to="/admin" className="dash-nav-item">Admin Panel</Link>}
-              <button className="dash-nav-item logout" onClick={() => { logout(); navigate('/'); }}>Logout</button>
+              <Link to="/events" className="dash-nav-item">🔍 Browse Events</Link>
+              {user.role === 'organizer' && <Link to="/organizer" className="dash-nav-item">🗂️ Organizer Panel</Link>}
+              {user.role === 'admin' && <Link to="/admin" className="dash-nav-item">⚙️ Admin Panel</Link>}
+              <button className="dash-nav-item logout" onClick={() => { logout(); navigate('/'); }}>🚪 Logout</button>
             </nav>
           </aside>
 
@@ -111,7 +111,7 @@ export const UserDashboard = () => {
                 ) : (
                   <div className="new-user-cta">
                     <div className="cta-card">
-                      <span></span>
+                      <span>🎉</span>
                       <div>
                         <h4>No bookings yet</h4>
                         <p>Browse hundreds of amazing events!</p>

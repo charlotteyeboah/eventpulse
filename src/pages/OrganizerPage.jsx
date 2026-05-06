@@ -118,8 +118,8 @@ const [editingEvent, setEditingEvent] = useState(null);
               <span>{event.price === 0 ? 'FREE' : `AED ${event.price}`}</span>
               <span>{event.capacity}</span>
               <div className="table-actions">
-               <button className="action-btn edit" onClick={() => { setEditingEvent(event); setNewEvent({ title: event.title, category: event.category, date: event.date ? new Date(event.date).toISOString().split('T')[0] : '', time: event.time || '', location: event.location, price: event.price, capacity: event.capacity, description: event.description || '' }); setShowCreateModal(true); }}>Edit</button>
-<button className="action-btn delete" onClick={() => handleDeleteEvent(event._id)}>Delete</button>
+               <button className="action-btn edit" onClick={() => { setEditingEvent(event); setNewEvent({ title: event.title, category: event.category, date: event.date ? new Date(event.date).toISOString().split('T')[0] : '', time: event.time || '', location: event.location, price: event.price, capacity: event.capacity, description: event.description || '' }); setShowCreateModal(true); }}>✏️ Edit</button>
+<button className="action-btn delete" onClick={() => handleDeleteEvent(event._id)}>🗑️ Delete</button>
               </div>
             </div>
           ))}

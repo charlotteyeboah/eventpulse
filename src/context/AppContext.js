@@ -9,14 +9,13 @@ export const AppProvider = ({ children }) => {
   const [bookings, setBookings] = useState([]);
   const [notifications, setNotifications] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
     const savedUser = localStorage.getItem('ep_user');
     const savedCart = localStorage.getItem('ep_cart');
-    const savedToken = localStorage.getItem('ep_token');
     if (savedUser) setUser(JSON.parse(savedUser));
     if (savedCart) setCart(JSON.parse(savedCart));
-    if (savedToken) localStorage.setItem('ep_token', savedToken);
   }, []);
+
   const login = async (userData) => {
     try {
       const data = await loginUser(userData);
