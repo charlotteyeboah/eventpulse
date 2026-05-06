@@ -1,3 +1,6 @@
+// Global State Management using React Context
+// Manages: Authentication, Cart, Bookings, Notifications
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { loginUser, registerUser, getMyBookings } from '../api';
 
