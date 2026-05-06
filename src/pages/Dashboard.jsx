@@ -27,7 +27,7 @@ export const UserDashboard = () => {
   }, [user, navigate]);
 
   if (!user) return null;
-S
+
   const totalSpent = bookings.reduce((a, b) => a + (b.totalPrice || 0), 0);
 
   const stats = [
