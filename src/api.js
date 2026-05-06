@@ -1,3 +1,7 @@
+// EventPulse API Service
+// Handles all HTTP requests to the backend
+// Base URL configured via environment variables
+
 const CATEGORY_IMAGES = {
   Technology: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format',
   Music: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&auto=format',
