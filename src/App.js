@@ -1,3 +1,6 @@
+// EventPulse - Full Stack Event Management System
+// Built with React JS, Node.js, Express and MongoDB
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
